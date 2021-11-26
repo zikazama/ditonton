@@ -5,90 +5,90 @@ import 'package:ditonton/domain/usecases/get_popular_tvs.dart';
 import 'package:ditonton/domain/usecases/get_top_rated_tvs.dart';
 import 'package:flutter/material.dart';
 
-class MovieListNotifier extends ChangeNotifier {
+class TvListNotifier extends ChangeNotifier {
   var _onTheAirTvs = <Tv>[];
   List<Tv> get onTheAirTvs => _onTheAirTvs;
 
   RequestState _onTheAirState = RequestState.Empty;
   RequestState get nowPlayingState => _onTheAirState;
 
-  var _popularMovies = <Tv>[];
-  List<Tv> get popularMovies => _popularMovies;
+  var _popularTvs = <Tv>[];
+  List<Tv> get popularTvs => _popularTvs;
 
-  RequestState _popularMoviesState = RequestState.Empty;
-  RequestState get popularMoviesState => _popularMoviesState;
+  RequestState _popularTvsState = RequestState.Empty;
+  RequestState get popularTvsState => _popularTvsState;
 
-  var _topRatedMovies = <Tv>[];
-  List<Tv> get topRatedMovies => _topRatedMovies;
+  var _topRatedTvs = <Tv>[];
+  List<Tv> get topRatedTvs => _topRatedTvs;
 
-  RequestState _topRatedMoviesState = RequestState.Empty;
-  RequestState get topRatedMoviesState => _topRatedMoviesState;
+  RequestState _topRatedTvsState = RequestState.Empty;
+  RequestState get topRatedTvsState => _topRatedTvsState;
 
   String _message = '';
   String get message => _message;
 
-  MovieListNotifier({
-    required this.getNowPlayingMovies,
-    required this.getPopularMovies,
-    required this.getTopRatedMovies,
+  TvListNotifier({
+    required this.getOnTheAirTvs,
+    required this.getPopularTvs,
+    required this.getTopRatedTvs,
   });
 
-  final GetNowPlayingMovies getNowPlayingMovies;
-  final GetPopularMovies getPopularMovies;
-  final GetTopRatedMovies getTopRatedMovies;
+  final GetOnTheAirTvs getOnTheAirTvs;
+  final GetPopularTvs getPopularTvs;
+  final GetTopRatedTvs getTopRatedTvs;
 
-  Future<void> fetchNowPlayingMovies() async {
-    _nowPlayingState = RequestState.Loading;
+  Future<void> fetchOnTheAirTvs() async {
+    _onTheAirState = RequestState.Loading;
     notifyListeners();
 
-    final result = await getNowPlayingMovies.execute();
+    final result = await getOnTheAirTvs.execute();
     result.fold(
       (failure) {
-        _nowPlayingState = RequestState.Error;
+        _onTheAirState = RequestState.Error;
         _message = failure.message;
         notifyListeners();
       },
-      (moviesData) {
-        _nowPlayingState = RequestState.Loaded;
-        _nowPlayingMovies = moviesData;
+      (tvsData) {
+        _onTheAirState = RequestState.Loaded;
+        _onTheAirTvs = tvsData;
         notifyListeners();
       },
     );
   }
 
-  Future<void> fetchPopularMovies() async {
-    _popularMoviesState = RequestState.Loading;
+  Future<void> fetchPopularTvs() async {
+    _popularTvsState = RequestState.Loading;
     notifyListeners();
 
-    final result = await getPopularMovies.execute();
+    final result = await getPopularTvs.execute();
     result.fold(
       (failure) {
-        _popularMoviesState = RequestState.Error;
+        _popularTvsState = RequestState.Error;
         _message = failure.message;
         notifyListeners();
       },
-      (moviesData) {
-        _popularMoviesState = RequestState.Loaded;
-        _popularMovies = moviesData;
+      (tvsData) {
+        _popularTvsState = RequestState.Loaded;
+        _popularTvs = tvsData;
         notifyListeners();
       },
     );
   }
 
-  Future<void> fetchTopRatedMovies() async {
-    _topRatedMoviesState = RequestState.Loading;
+  Future<void> fetchTopRatedTvs() async {
+    _topRatedTvsState = RequestState.Loading;
     notifyListeners();
 
-    final result = await getTopRatedMovies.execute();
+    final result = await getTopRatedTvs.execute();
     result.fold(
       (failure) {
-        _topRatedMoviesState = RequestState.Error;
+        _topRatedTvsState = RequestState.Error;
         _message = failure.message;
         notifyListeners();
       },
-      (moviesData) {
-        _topRatedMoviesState = RequestState.Loaded;
-        _topRatedMovies = moviesData;
+      (tvsData) {
+        _topRatedTvsState = RequestState.Loaded;
+        _topRatedTvs = tvsData;
         notifyListeners();
       },
     );
