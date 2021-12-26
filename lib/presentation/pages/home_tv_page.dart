@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ditonton/common/constants.dart';
-import 'package:ditonton/domain/entities/movie.dart';
+import 'package:ditonton/domain/entities/tv.dart';
 import 'package:ditonton/presentation/pages/about_page.dart';
 import 'package:ditonton/presentation/pages/tv_detail_page.dart';
-import 'package:ditonton/presentation/pages/popular_tv_page.dart';
-import 'package:ditonton/presentation/pages/search_page_tv.dart';
-import 'package:ditonton/presentation/pages/top_rated_tv_page.dart';
+import 'package:ditonton/presentation/pages/popular_tvs_page.dart';
+import 'package:ditonton/presentation/pages/search_page_tvs.dart';
+import 'package:ditonton/presentation/pages/top_rated_tvs_page.dart';
 import 'package:ditonton/presentation/pages/watchlist_tvs_page.dart';
 import 'package:ditonton/presentation/provider/tv_list_notifier.dart';
 import 'package:ditonton/common/state_enum.dart';
@@ -23,11 +23,10 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(
-        () => Provider.of<TvListNotifier>(context, listen: false)
-          ..fetchOnTheAirTvs()
-          ..fetchPopularTvs()
-          ..fetchTopRatedTvs());
+    Future.microtask(() => Provider.of<TvListNotifier>(context, listen: false)
+      ..fetchOnTheAirTvs()
+      ..fetchPopularTvs()
+      ..fetchTopRatedTvs());
   }
 
   @override
@@ -72,7 +71,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SearchPageTv.ROUTE_NAME);
+              Navigator.pushNamed(context, SearchPageTvs.ROUTE_NAME);
             },
             icon: Icon(Icons.search),
           )
@@ -112,7 +111,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                     child: CircularProgressIndicator(),
                   );
                 } else if (state == RequestState.Loaded) {
-                  return MovieList(data.popularTvs);
+                  return TvList(data.popularTvs);
                 } else {
                   return Text('Failed');
                 }
@@ -129,7 +128,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                     child: CircularProgressIndicator(),
                   );
                 } else if (state == RequestState.Loaded) {
-                  return MovieList(data.topRatedTvs);
+                  return TvList(data.topRatedTvs);
                 } else {
                   return Text('Failed');
                 }
@@ -163,10 +162,10 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
   }
 }
 
-class MovieList extends StatelessWidget {
-  final List<Movie> movies;
+class TvList extends StatelessWidget {
+  final List<Tv> tvs;
 
-  MovieList(this.movies);
+  TvList(this.tvs);
 
   @override
   Widget build(BuildContext context) {
@@ -175,7 +174,7 @@ class MovieList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final movie = movies[index];
+          final tv = tvs[index];
           return Container(
             padding: const EdgeInsets.all(8),
             child: InkWell(
@@ -183,13 +182,13 @@ class MovieList extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   TvDetailPage.ROUTE_NAME,
-                  arguments: movie.id,
+                  arguments: tv.id,
                 );
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(16)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${movie.posterPath}',
+                  imageUrl: '$BASE_IMAGE_URL${tv.posterPath}',
                   placeholder: (context, url) => Center(
                     child: CircularProgressIndicator(),
                   ),
@@ -199,7 +198,7 @@ class MovieList extends StatelessWidget {
             ),
           );
         },
-        itemCount: movies.length,
+        itemCount: tvs.length,
       ),
     );
   }
