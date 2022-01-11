@@ -5,7 +5,6 @@ import 'package:equatable/equatable.dart';
 class TvDetailResponse extends Equatable {
   TvDetailResponse({
     required this.backdropPath,
-    required this.budget,
     required this.genres,
     required this.homepage,
     required this.id,
@@ -16,18 +15,14 @@ class TvDetailResponse extends Equatable {
     required this.popularity,
     required this.posterPath,
     required this.firstAirDate,
-    required this.revenue,
-    required this.runtime,
     required this.status,
     required this.tagline,
     required this.name,
-    required this.video,
     required this.voteAverage,
     required this.voteCount,
   });
 
   final String? backdropPath;
-  final int budget;
   final List<GenreModel> genres;
   final String homepage;
   final int id;
@@ -38,19 +33,15 @@ class TvDetailResponse extends Equatable {
   final double popularity;
   final String posterPath;
   final String firstAirDate;
-  final int revenue;
-  final int runtime;
   final String status;
   final String tagline;
   final String name;
-  final bool video;
   final double voteAverage;
   final int voteCount;
 
   factory TvDetailResponse.fromJson(Map<String, dynamic> json) =>
       TvDetailResponse(
         backdropPath: json["backdrop_path"],
-        budget: json["budget"],
         genres: List<GenreModel>.from(
             json["genres"].map((x) => GenreModel.fromJson(x))),
         homepage: json["homepage"],
@@ -62,19 +53,15 @@ class TvDetailResponse extends Equatable {
         popularity: json["popularity"].toDouble(),
         posterPath: json["poster_path"],
         firstAirDate: json["first_air_date"],
-        revenue: json["revenue"],
-        runtime: json["runtime"],
         status: json["status"],
         tagline: json["tagline"],
         name: json["name"],
-        video: json["video"],
         voteAverage: json["vote_average"].toDouble(),
         voteCount: json["vote_count"],
       );
 
   Map<String, dynamic> toJson() => {
         "backdrop_path": backdropPath,
-        "budget": budget,
         "genres": List<dynamic>.from(genres.map((x) => x.toJson())),
         "homepage": homepage,
         "id": id,
@@ -85,12 +72,9 @@ class TvDetailResponse extends Equatable {
         "popularity": popularity,
         "poster_path": posterPath,
         "first_air_date": firstAirDate,
-        "revenue": revenue,
-        "runtime": runtime,
         "status": status,
         "tagline": tagline,
         "name": name,
-        "video": video,
         "vote_average": voteAverage,
         "vote_count": voteCount,
       };
@@ -114,7 +98,6 @@ class TvDetailResponse extends Equatable {
   // TODO: implement props
   List<Object?> get props => [
         backdropPath,
-        budget,
         genres,
         homepage,
         id,
@@ -125,12 +108,9 @@ class TvDetailResponse extends Equatable {
         popularity,
         posterPath,
         firstAirDate,
-        revenue,
-        runtime,
         status,
         tagline,
         name,
-        video,
         voteAverage,
         voteCount,
       ];

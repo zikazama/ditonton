@@ -33,8 +33,7 @@ class DatabaseHelper {
   }
 
   void _onCreate(Database db, int version) async {
-    await db.execute(
-        '''
+    await db.execute('''
       CREATE TABLE  $_tblWatchlist (
         id INTEGER PRIMARY KEY,
         title TEXT,
@@ -42,11 +41,10 @@ class DatabaseHelper {
         posterPath TEXT
       );
     ''');
-    await db.execute(
-        '''
+    await db.execute('''
       CREATE TABLE  $_tblWatchlistTv (
         id INTEGER PRIMARY KEY,
-        title TEXT,
+        name TEXT,
         overview TEXT,
         posterPath TEXT
       );
