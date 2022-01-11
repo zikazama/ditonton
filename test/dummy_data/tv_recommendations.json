@@ -1,0 +1,233 @@
+{
+  "page": 1,
+  "results": [
+  {
+  "adult": false,
+  "backdrop_path": "/9hNJ3fvIVd4WE3rU1Us2awoTpgM.jpg",
+  "genre_ids": [
+  18,
+  10765
+  ],
+  "id": 96777,
+  "media_type": "tv",
+  "name": "The Silent Sea",
+  "origin_country": [
+  "KR"
+  ],
+  "original_language": "ko",
+  "original_name": "고요의 바다",
+  "overview": "During a perilous 24-hour mission on the moon, space explorers try to retrieve samples from an abandoned research facility steeped in classified secrets.",
+  "popularity": 1466.885,
+  "poster_path": "/fFT0IgqtCOks4munDTxQwkvNJkd.jpg",
+  "first_air_date": "2021-12-24",
+  "vote_average": 8.1,
+  "vote_count": 180
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/1R68vl3d5s86JsS2NPjl8UoMqIS.jpg",
+  "genre_ids": [
+  10759,
+  18
+  ],
+  "id": 88329,
+  "media_type": "tv",
+  "name": "Hawkeye",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Hawkeye",
+  "overview": "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton’s past threatens to derail far more than the festive spirit.",
+  "popularity": 1226.698,
+  "poster_path": "/pqzjCxPVc9TkVgGRWeAoMmyqkZV.jpg",
+  "first_air_date": "2021-11-24",
+  "vote_average": 8.39,
+  "vote_count": 1414
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/iErNFZiMKlJadcAJyYii2TJFwmA.jpg",
+  "genre_ids": [
+  18
+  ],
+  "id": 139799,
+  "media_type": "tv",
+  "name": "Kitz",
+  "origin_country": [
+  "AT",
+  "DE"
+  ],
+  "original_language": "de",
+  "original_name": "Kitz",
+  "overview": "Seeking revenge on the girl she blames for her brother's death, a Kitzbühel waitress infiltrates the glitzy world of a group of wealthy Munich teens.",
+  "popularity": 35.058,
+  "poster_path": "/c7mFWh4uLhX99CP16YiVHmhBydI.jpg",
+  "first_air_date": "2021-12-30",
+  "vote_average": 7.917,
+  "vote_count": 24
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/uQUHCqxHsG9blvtCoL7vluMG9Jp.jpg",
+  "genre_ids": [
+  37,
+  18
+  ],
+  "id": 118357,
+  "media_type": "tv",
+  "name": "1883",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "1883",
+  "overview": "Follow the Dutton family as they embark on a journey west through the Great Plains toward the last bastion of untamed America. A stark retelling of Western expansion, and an intense study of one family fleeing poverty to seek a better future in America’s promised land — Montana.",
+  "popularity": 96.779,
+  "poster_path": "/waLbm384SQDwLTCn6ttPqQS5kfV.jpg",
+  "first_air_date": "2021-12-19",
+  "vote_average": 8.875,
+  "vote_count": 36
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/1P3QtW1IkivqDrKbbwuR0zCYIf8.jpg",
+  "genre_ids": [
+  10765,
+  18
+  ],
+  "id": 71914,
+  "media_type": "tv",
+  "name": "The Wheel of Time",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "The Wheel of Time",
+  "overview": "Follow Moiraine, a member of the shadowy and influential all-female organization called the “Aes Sedai” as she embarks on a dangerous, world-spanning journey with five young men and women. Moiraine believes one of them might be the reincarnation of an incredibly powerful individual, whom prophecies say will either save humanity or destroy it.",
+  "popularity": 1298.715,
+  "poster_path": "/mpgDeLhl8HbhI03XLB7iKO6M6JE.jpg",
+  "first_air_date": "2021-11-18",
+  "vote_average": 7.964,
+  "vote_count": 959
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg",
+  "genre_ids": [
+  16,
+  10765,
+  10759,
+  18
+  ],
+  "id": 94605,
+  "media_type": "tv",
+  "name": "Arcane",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Arcane",
+  "overview": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+  "popularity": 663.305,
+  "poster_path": "/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+  "first_air_date": "2021-11-06",
+  "vote_average": 9.117,
+  "vote_count": 1487
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
+  "genre_ids": [
+  10765,
+  18,
+  10759
+  ],
+  "id": 71912,
+  "media_type": "tv",
+  "name": "The Witcher",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "The Witcher",
+  "overview": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
+  "popularity": 865.028,
+  "poster_path": "/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+  "first_air_date": "2019-12-20",
+  "vote_average": 8.238,
+  "vote_count": 3263
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/35SS0nlBhu28cSe7TiO3ZiywZhl.jpg",
+  "genre_ids": [
+  10759,
+  18
+  ],
+  "id": 77169,
+  "media_type": "tv",
+  "name": "Cobra Kai",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Cobra Kai",
+  "overview": "This Karate Kid sequel series picks up 30 years after the events of the 1984 All Valley Karate Tournament and finds Johnny Lawrence on the hunt for redemption by reopening the infamous Cobra Kai karate dojo. This reignites his old rivalry with the successful Daniel LaRusso, who has been working to maintain the balance in his life without mentor Mr. Miyagi.",
+  "popularity": 3493.41,
+  "poster_path": "/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg",
+  "first_air_date": "2018-05-02",
+  "vote_average": 8.144,
+  "vote_count": 3995
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/4N6zEMfZ57zNEQcM8gWeERFupMv.jpg",
+  "genre_ids": [
+  16,
+  10759,
+  10765
+  ],
+  "id": 91363,
+  "media_type": "tv",
+  "name": "What If...?",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "What If...?",
+  "overview": "Taking inspiration from the comic books of the same name, each episode explores a pivotal moment from the Marvel Cinematic Universe and turns it on its head, leading the audience into uncharted territory.",
+  "popularity": 304.229,
+  "poster_path": "/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg",
+  "first_air_date": "2021-08-11",
+  "vote_average": 8.44,
+  "vote_count": 2672
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/9ijMGlJKqcslswWUzTEwScm82Gs.jpg",
+  "genre_ids": [
+  10765,
+  10759,
+  37,
+  18
+  ],
+  "id": 82856,
+  "media_type": "tv",
+  "name": "The Mandalorian",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "The Mandalorian",
+  "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+  "popularity": 321.2,
+  "poster_path": "/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+  "first_air_date": "2019-11-12",
+  "vote_average": 8.48,
+  "vote_count": 7148
+  }
+  ],
+  "total_pages": 1,
+  "total_results": 10
+  }
