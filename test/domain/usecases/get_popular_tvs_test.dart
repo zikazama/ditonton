@@ -1,21 +1,21 @@
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/domain/entities/movie.dart';
-import 'package:ditonton/domain/usecases/get_popular_movies.dart';
+import 'package:ditonton/domain/entities/tv.dart';
+import 'package:ditonton/domain/usecases/get_popular_tvs.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../helpers/test_helper.mocks.dart';
 
 void main() {
-  late GetPopularMovies usecase;
-  late MockMovieRepository mockMovieRpository;
+  late GetPopularTvs usecase;
+  late MockTvRepository mockTvRpository;
 
   setUp(() {
-    mockMovieRpository = MockMovieRepository();
-    usecase = GetPopularMovies(mockMovieRpository);
+    mockTvRpository = MockTvRepository();
+    usecase = GetPopularTvs(mockTvRpository);
   });
 
-  final tMovies = <Movie>[];
+  final tTvs = <Tv>[];
 
   group('GetPopularMovies Tests', () {
     group('execute', () {
@@ -23,12 +23,12 @@ void main() {
           'should get list of movies from the repository when execute function is called',
           () async {
         // arrange
-        when(mockMovieRpository.getPopularMovies())
-            .thenAnswer((_) async => Right(tMovies));
+        when(mockTvRpository.getPopularTvs())
+            .thenAnswer((_) async => Right(tTvs));
         // act
         final result = await usecase.execute();
         // assert
-        expect(result, Right(tMovies));
+        expect(result, Right(tTvs));
       });
     });
   });

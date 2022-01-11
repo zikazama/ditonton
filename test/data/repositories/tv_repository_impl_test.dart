@@ -12,7 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../dummy_data/dummy_objects.dart';
-import '../../helpers/test_helper.mock.dart';
+import '../../helpers/test_helper.mocks.dart';
 
 void main() {
   late TvRepositoryImpl repository;
@@ -85,7 +85,7 @@ void main() {
       // act
       final result = await repository.getOnTheAirTvs();
       // assert
-      verify(mockRemoteDataSource.getNowPlayingMovies());
+      verify(mockRemoteDataSource.getOnTheAirTvs());
       expect(result, equals(Left(ServerFailure(''))));
     });
 
@@ -98,7 +98,7 @@ void main() {
       // act
       final result = await repository.getOnTheAirTvs();
       // assert
-      verify(mockRemoteDataSource.getNowPlayingMovies());
+      verify(mockRemoteDataSource.getOnTheAirTvs());
       expect(result,
           equals(Left(ConnectionFailure('Failed to connect to the network'))));
     });
@@ -293,7 +293,7 @@ void main() {
     test('should return tv list when call to data source is successful',
         () async {
       // arrange
-      when(mockRemoteDataSource.searchMovies(tQuery))
+      when(mockRemoteDataSource.searchTvs(tQuery))
           .thenAnswer((_) async => tTvModelList);
       // act
       final result = await repository.searchTvs(tQuery);
@@ -330,7 +330,7 @@ void main() {
   group('save watchlist', () {
     test('should return success message when saving successful', () async {
       // arrange
-      when(mockLocalDataSource.insertWatchlistTv(testTvTable))
+      when(mockLocalDataSource.insertWatchlist(testTvTable))
           .thenAnswer((_) async => 'Added to Watchlist');
       // act
       final result = await repository.saveWatchlistTv(testTvDetail);
@@ -375,7 +375,7 @@ void main() {
     test('should return watch status whether data is found', () async {
       // arrange
       final tId = 1;
-      when(mockLocalDataSource.getMovieById(tId)).thenAnswer((_) async => null);
+      when(mockLocalDataSource.getTvById(tId)).thenAnswer((_) async => null);
       // act
       final result = await repository.isAddedToWatchlistTv(tId);
       // assert
