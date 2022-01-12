@@ -40,7 +40,7 @@ void main() {
     firstAirDate: '2002-05-01',
     voteAverage: 7.2,
     voteCount: 13507,
-    name: '',
+    name: 'Spider-Man',
   );
 
   final tTv = Tv(
