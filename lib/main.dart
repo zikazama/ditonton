@@ -1,6 +1,9 @@
 import 'package:core/common/constants.dart';
 import 'package:ditonton/presentation/pages/about_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/presentation/bloc/search_bloc.dart';
 import 'package:movie/presentation/pages/movie_detail_page.dart';
+import 'package:tv/presentation/bloc/search_bloc_tv.dart';
 import 'package:tv/presentation/pages/tv_detail_page.dart';
 import 'package:movie/presentation/pages/home_movie_page.dart';
 import 'package:tv/presentation/pages/home_tv_page.dart';
@@ -74,6 +77,12 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<WatchlistTvNotifier>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<SearchBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<SearchBlocTv>(),
         ),
       ],
       child: MaterialApp(

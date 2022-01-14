@@ -1,5 +1,6 @@
 import 'package:core/data/datasources/db/database_helper.dart';
 import 'package:movie/data/datasources/movie_local_data_source.dart';
+import 'package:movie/presentation/bloc/search_bloc.dart';
 import 'package:tv/data/datasources/tv_local_data_source.dart';
 import 'package:movie/data/datasources/movie_remote_data_source.dart';
 import 'package:tv/data/datasources/tv_remote_data_source.dart';
@@ -28,6 +29,7 @@ import 'package:tv/domain/usecases/save_watchlist_tv.dart';
 import 'package:movie/domain/usecases/search_movies.dart';
 import 'package:tv/domain/usecases/search_tvs.dart';
 import 'package:movie/presentation/provider/movie_detail_notifier.dart';
+import 'package:tv/presentation/bloc/search_bloc_tv.dart';
 import 'package:tv/presentation/provider/tv_detail_notifier.dart';
 import 'package:movie/presentation/provider/movie_list_notifier.dart';
 import 'package:tv/presentation/provider/tv_list_notifier.dart';
@@ -116,6 +118,20 @@ void init() {
   locator.registerFactory(
     () => WatchlistTvNotifier(
       getWatchlistTvs: locator(),
+    ),
+  );
+
+  // bloc
+  locator.registerFactory(
+    () => SearchBloc(
+      locator(),
+    ),
+  );
+
+  // bloc
+  locator.registerFactory(
+    () => SearchBlocTv(
+      locator(),
     ),
   );
 
