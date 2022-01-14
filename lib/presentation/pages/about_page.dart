@@ -1,5 +1,7 @@
 import 'package:core/common/constants.dart';
+import 'package:ditonton/presentation/provider/about_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AboutPage extends StatelessWidget {
   static const ROUTE_NAME = '/about';
@@ -32,6 +34,16 @@ class AboutPage extends StatelessWidget {
                     textAlign: TextAlign.justify,
                   ),
                 ),
+              ),
+              Consumer<CatNotifier>(
+                builder: (context, notifier, child) {
+                  final catImage = notifier.image;
+                  return Center(
+                    child: catImage != null
+                        ? Image.network(catImage.link)
+                        : Text('Image not loaded yet'),
+                  );
+                },
               ),
             ],
           ),
