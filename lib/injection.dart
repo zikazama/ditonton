@@ -43,6 +43,7 @@ import 'package:movie/presentation/provider/watchlist_movie_notifier.dart';
 import 'package:tv/presentation/provider/watchlist_tv_notifier.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
+import 'package:ditonton/utils/security.dart';
 
 final locator = GetIt.instance;
 
@@ -185,5 +186,6 @@ void init() {
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  // locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => SSLPinning.client);
 }
