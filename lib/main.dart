@@ -4,6 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/presentation/bloc/search_bloc.dart';
 import 'package:movie/presentation/pages/movie_detail_page.dart';
 import 'package:tv/presentation/bloc/search_bloc_tv.dart';
+import 'package:tv/presentation/bloc/on_air_tv_bloc.dart';
+import 'package:tv/presentation/bloc/popular_tv_bloc.dart';
+import 'package:tv/presentation/bloc/recommendations_bloc.dart';
+import 'package:tv/presentation/bloc/top_rated_tv_bloc.dart';
+import 'package:tv/presentation/bloc/tv_detail_bloc.dart';
+import 'package:tv/presentation/bloc/watchlist_page_bloc.dart';
+import 'package:tv/presentation/bloc/watchlist_tv_bloc.dart';
 import 'package:tv/presentation/pages/tv_detail_page.dart';
 import 'package:movie/presentation/pages/home_movie_page.dart';
 import 'package:tv/presentation/pages/home_tv_page.dart';
@@ -62,26 +69,26 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<MovieSearchNotifier>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<TvSearchNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<OnAirTvBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<TopRatedMoviesNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<TvDetailBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<TopRatedTvsNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<TvRecommendationBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<PopularMoviesNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<TopRatedTvBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<PopularTvsNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<PopularTvBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<WatchlistMovieNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<WatchlistTvBloc>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<WatchlistTvNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<TvWatchlistPageBloc>(),
         ),
         BlocProvider(
           create: (_) => di.locator<SearchBloc>(),
