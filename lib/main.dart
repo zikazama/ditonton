@@ -23,17 +23,10 @@ import 'package:tv/presentation/pages/top_rated_tvs_page.dart';
 import 'package:movie/presentation/pages/watchlist_movies_page.dart';
 import 'package:tv/presentation/pages/watchlist_tvs_page.dart';
 import 'package:movie/presentation/provider/movie_detail_notifier.dart';
-import 'package:tv/presentation/provider/tv_detail_notifier.dart';
 import 'package:movie/presentation/provider/movie_list_notifier.dart';
-import 'package:tv/presentation/provider/tv_list_notifier.dart';
-import 'package:movie/presentation/provider/movie_search_notifier.dart';
-import 'package:tv/presentation/provider/tv_search_notifier.dart';
 import 'package:movie/presentation/provider/popular_movies_notifier.dart';
-import 'package:tv/presentation/provider/popular_tvs_notifier.dart';
 import 'package:movie/presentation/provider/top_rated_movies_notifier.dart';
-import 'package:tv/presentation/provider/top_rated_tvs_notifier.dart';
 import 'package:movie/presentation/provider/watchlist_movie_notifier.dart';
-import 'package:tv/presentation/provider/watchlist_tv_notifier.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -58,16 +51,16 @@ class MyApp extends StatelessWidget {
           create: (_) => di.locator<MovieListNotifier>(),
         ),
         ChangeNotifierProvider(
-          create: (_) => di.locator<TvListNotifier>(),
-        ),
-        ChangeNotifierProvider(
           create: (_) => di.locator<MovieDetailNotifier>(),
         ),
         ChangeNotifierProvider(
-          create: (_) => di.locator<TvDetailNotifier>(),
+          create: (_) => di.locator<PopularMoviesNotifier>(),
         ),
         ChangeNotifierProvider(
-          create: (_) => di.locator<MovieSearchNotifier>(),
+          create: (_) => di.locator<TopRatedMoviesNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<WatchlistMovieNotifier>(),
         ),
         BlocProvider(
           create: (_) => di.locator<OnAirTvBloc>(),

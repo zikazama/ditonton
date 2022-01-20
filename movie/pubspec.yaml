@@ -29,6 +29,7 @@ dependencies:
     path: ../tv
   ditonton:
     path: ..
+  firebase_crashlytics: ^2.4.5
 
 dev_dependencies:
   mockito: ^5.0.8
@@ -44,6 +45,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+
+  uses-material-design: true
 
   # To add assets to your package, add an assets section, like this:
   # assets:

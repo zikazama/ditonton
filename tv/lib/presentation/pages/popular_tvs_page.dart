@@ -1,5 +1,4 @@
 import 'package:core/common/state_enum.dart';
-import 'package:tv/presentation/provider/popular_tvs_notifier.dart';
 import 'package:tv/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

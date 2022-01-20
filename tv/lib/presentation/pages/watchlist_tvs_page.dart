@@ -1,7 +1,6 @@
 import 'package:core/common/state_enum.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv/presentation/bloc/watchlist_page_bloc.dart';
-import 'package:tv/presentation/provider/watchlist_tv_notifier.dart';
 import 'package:tv/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

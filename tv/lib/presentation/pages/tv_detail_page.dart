@@ -6,7 +6,6 @@ import 'package:tv/domain/entities/tv_detail.dart';
 import 'package:tv/presentation/bloc/recommendations_bloc.dart';
 import 'package:tv/presentation/bloc/tv_detail_bloc.dart';
 import 'package:tv/presentation/bloc/watchlist_tv_bloc.dart';
-import 'package:tv/presentation/provider/tv_detail_notifier.dart';
 import 'package:core/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
